@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+
+    console.log("Hiiiii")
+
+    let str1 = "Hi this is"
+    let str2 = "viki"
+    console.log(str1,str2)
+    console.log(str1+str2)
+    console.log(str1.concat(str2))
+    console.log(str1.concat(str2," welcome to india"))
+
+
+    let str = "Stars Miss the sun in the morning sky"
+    console.log(str.slice(5))
+    console.log(str.slice(5,10))
+    console.log(str.slice(-5))
+    console.log(str.slice(-5,-1))
+    console.log(str.slice(-10,30))
+    console.log(str.slice(-10,-9))
+    console.log(str.slice(-10,-8))
+    console.log(str.slice(-10,-7))
+
+    console.log(str.substring(5))
+    console.log(str.substring(-5))
+    console.log(str.substring(5,10))
+    console.log(str.substring(10,5))
+    console.log(str.substring(-10,30))
+    console.log(str.substring(-10,-1))
+    console.log(str.substring(0,-2))
+
+    console.log(str.substr(5))
+    console.log(str.substr(-10))
+    console.log(str.substr(5,10))
+    console.log(str.substr(-10,5))
+    console.log(str.substr(-10,-5))//empty
+
+
+    console.log(str.replace("Stars","Moon"))
+    console.log(str.replace("Stars","11.11"))
+
+    str = "hi hi hi";
+    console.log(str.replace("hi",'bye'))
+    console.log(str.replaceAll("hi",'bye'))
+
+    let a = "       computer Network is Easy        "
+    console.log(a.trim())
+    console.log(a.trimEnd())
+    console.log(a.trimStart())
+
+    console.log(str.length)
+
+
+    str = "happy "
+    console.log(str.padEnd(23,str))
+    
+    str = "hi"
+    console.log(str.padEnd(10,'i'))
+
+    str = "oh"
+    console.log(str.padStart(10,'o'))
+
+
+
+    str = "captain america"
+    console.log(str.indexOf("t"))
+    console.log(str.indexOf("ta"))
+    console.log(str.indexOf('a'))
+    console.log(str.lastIndexOf('a'))
+    console.log(str.indexOf('z'))
+
+    console.log(str.search('america'))
+    console.log(str.search("the"))
+
+    console.log(str.includes("cap"))
+    console.log(str.includes("amer"))
+    console.log(str.includes("the"))
+
+    console.log(str.startsWith('c'))
+    console.log(str.startsWith('a'))
+    console.log(str.endsWith('a'))
+    console.log(str.endsWith('c'))
+  </script>
+</body>
+</html>
