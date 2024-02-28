@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    let arr = ['a','b','c','d','e','f']
+    console.log(arr.push('h'))
+    console.log(arr.push('h'))
+    console.table(arr)
+
+    console.log(arr.pop())
+    console.log(arr)
+    console.log(arr.pop())
+    console.log(arr)
+
+    console.log(arr.shift())
+    console.log(arr)
+    console.log(arr.unshift('a'))
+    console.log(arr)
+
+
+    arr = ['a','b','c','d','e','f']
+    console.log(arr.splice(1,1))
+    console.log(arr)
+    console.log(arr.splice(2))
+    console.log(arr)
+
+
+    arr = ['a','b','c','d','e','f']
+    console.log(arr.splice(0,0,'z'))
+    console.log(arr)
+
+    arr = ['a','b','c','d','e','f']
+    console.log(arr.splice(0,1,'z'))
+    console.log(arr)
+
+    arr = ['a','b','c','d','e','f']
+    console.log(arr.splice(0,3,'x','y','z'))
+    console.log(arr)
+
+    console.log(delete arr[1])
+    console.log(arr)
+
+    arr = [6,5,4,3,2,1]
+    console.log(arr.reverse())
+    console.log(arr.join(''))
+    console.log(arr.join())
+    console.log(arr.join(" "))
+  </script>
+</body>
+</html>
