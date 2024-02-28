@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="wrapper">
+    <h2>Select City</h2>
+
+    <div class="inputdiv">
+      <select name="" id="input">
+      <option value="bangalore">Bangalore</option>
+      <option value="delhi">Delhi</option>
+      <option value="mumbai">Mumbai</option>
+    </select>
+    </div>
+    <div>
+      <button type="submit" onclick="calc()">show stats</button>
+    </div>
+
+  </div>
+
+  <script>
+
+    let button = document.querySelector("button")
+    button.addEventListener("click",display)
+
+    let res = document.createElement("div")
+    res.id = "result"
+    document.getElementById("wrapper").append(res)
+
+    function display(){
+      let input = document.getElementById("input")
+      let city = input.options[input.selectedIndex].value
+      let population = 0
+      let literacyRate = 0
+      let language 
+
+      switch(city){
+        case "bangalore":
+          population = 900000
+          literacyRate = 88.7
+          language = "kanada"   
+          break 
+        case "delhi":
+          population = 8000000
+          literacyRate = 98.7
+          language = "hindhi"   
+          break
+        case "mumbai":
+          population = 7000000
+          literacyRate = 56.7
+          language = "english"   
+          break  
+        }
+
+        let text = `The Indian City of ${city} has a ${population} . Language spoken is ${language} and Literacy rate is ${literacyRate}%`
+
+        res.innerHTML = text
+        
+    }
+  </script>
+</body>
+</html>
