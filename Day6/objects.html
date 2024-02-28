@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    let item = {
+      name:'phone',
+      price:'20000',
+      quantity:1
+    }
+
+    console.log(item)
+    console.log(item.name)
+    console.log(item['name'])
+    console.log(item.price)
+    console.log(item['price'])
+    console.log(item.quantity)
+    console.log(item['quantity'])
+
+    item.company = "samsung"
+    console.log(item)
+
+    let item1 = new Object
+    item1.name = "laptop"
+    item1['price'] = 500000
+    console.log(item1)
+
+    let student = {
+      name:"viki",
+      age:23,
+      gender:['male','female'],
+      marks:{
+        maths:90,
+        science:80,
+        social:70
+      }
+    }
+
+    console.log(student)
+    console.log(student.gender)
+    console.log(student.gender[0])
+    console.log(student.gender[1])
+
+    console.log(student.marks)
+    console.log(student.marks.maths)
+    console.log(student.marks.science)
+    console.log(student.marks.social)
+
+    let employee = {
+      name:'sai',
+      age:23,
+      role(){
+        console.log("Software Developer")
+      }
+    }
+
+    console.log(employee)
+    console.log(employee.role)
+    employee.role()
+  </script>
+</body>
+</html>
