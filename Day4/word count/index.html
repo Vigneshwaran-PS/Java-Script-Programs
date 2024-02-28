@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  
+  <div id="wrapper">
+    <h2>Word Counter</h2>
+    <div id="inputdiv">
+      <textarea name="" id="input" cols="30" rows="10"></textarea>
+    </div>
+    <div id="result"></div>
+  </div>
+
+  <script>
+    let inputObj = document.getElementById("input")
+    let res = document.getElementById("result")
+ 
+    inputObj.addEventListener("input" , function(){
+      let count = inputObj.value.length
+      res.innerHTML = count + "words"
+    })
+  </script>
+</body>
+</html>

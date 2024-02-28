@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div id="wrapper">
+    <h2>EB Bill</h2>
+
+    <div class="inputdiv">
+      <input type="text" id="input" placeholder="units">
+    </div>
+    <div>
+      <button type="submit" onclick="calc()">calculate</button>
+    </div>
+    <div id="result"></div>
+  </div>
+
+  <script>
+    function calc(){
+      let inputObj = Number(document.getElementById("input").value)
+      let unit = inputObj
+      let amount = 0;
+
+      if(unit < 100){
+        amount = 0
+      }else if(unit>=100 && unit<=200){
+        amount = 100 * 0 + (unit-100) * 2
+      }else if(unit>200 && unit<=300){
+        amount = 100 * 0 + 100 * 2 + (unit-200) * 3
+      }else{
+        amount = 100 * 0 + 100 * 2 + 100 * 3 + (unit - 300) * 5
+      }
+
+      let res = document.getElementById("result")
+      res.innerHTML = "Your Electricity Bill is : Rs."+amount
+    }
+  </script>
+</body>
+</html>

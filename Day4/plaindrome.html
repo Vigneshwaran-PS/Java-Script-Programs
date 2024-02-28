@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+
+    let str = "was it a car or a cat i saw"
+    let spaceRemove = str.replaceAll(" ",'')
+    console.log(spaceRemove)
+    let arr = spaceRemove.split()
+    console.log(arr)
+    let reverse = String(arr.reverse())
+    console.log(reverse)
+    
+    if(spaceRemove === reverse){
+      console.log("true")
+    }else{
+      console.log("false")
+    }
+    
+  </script>
+</body>
+</html>
