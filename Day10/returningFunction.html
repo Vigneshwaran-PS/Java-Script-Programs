@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let a = 100
+
+  function fun(){
+    let b , c // local variables
+    console.log('a is :',a)
+  }
+
+  fun()
+  a = 200
+  fun() 
+
+
+  function outer(name){
+    let outerVariable = "bread"
+    function inner(){
+      let innerVariable = "butter"
+      console.log("inner varibale : ",innerVariable)
+      console.log("outer varibale : ",outerVariable)// lexical scoping
+
+      console.log("a is : ",a) // lexical scoping
+      console.log("name : ",name)
+    }
+    return inner
+  }
+
+  let call = outer("viki")
+  call()
+
+  let call2 = outer("maki")
+  call2()
+
+  call()
+
+  //another example
+  function makeAdder(x){
+    return function(y){
+      return x + y
+    }
+  }
+
+  let adder = makeAdder(5)
+  console.log(adder(10))
+  console.log(adder(20))
+  </script>
+</body>
+</html>
