@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    //example1
+    let priceUSD = [10,20,30]
+    let priceIND = priceUSD.map(val => val*83)
+    console.log(priceIND)
+
+
+
+    //example2
+    let strArr = ["viki","sai","mei"]
+    let welcome = strArr.map(concating)
+    function concating(val){
+        return "hi "+val
+    }
+    console.log(welcome)
+
+
+    //example3
+    //array of objects
+    let datas = [{name:"viki" , age:"45"},
+                {name:"mei" , age:"98"},
+                {name:"sai" , age:"67"}
+              ]
+
+    let ages = datas.map(x => x.age)
+    console.log(ages)
+
+    let names = datas.map(x => x.name)
+    console.log(names)
+  </script>
+</body>
+</html>

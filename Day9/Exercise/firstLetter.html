@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let arr = ["viki","sai","mei"]
+    // let str = arr.map(val => val.charAt(0))
+    // console.log(str)
+
+    let str = arr.reduce((accumulator,val) => {
+      accumulator = accumulator + val.charAt(0)
+      return accumulator
+    } , "")
+    console.log(str)
+  </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+
+  <script>
+
+    let cost = [22,87,45,60,67,115]
+
+    let totCost = cost.reduce((accumulator,val) => accumulator+val)
+    console.log(totCost)
+
+    let totCost1 = cost.reduce((accumulator,val) => accumulator+val , 1000)
+    console.log(totCost1)
+
+
+    //another example
+    let arr = [ ['a','b','c'],
+              ['c','d','f'],
+            ['e','d','c']]
+    console.log(arr)
+    console.log(arr.flat())
+
+    let count = arr.flat().reduce((accumulator,curVal) => {
+      if(accumulator[curVal]){
+        accumulator[curVal]++
+      }else{
+        accumulator[curVal] = 1
+      }
+      return accumulator
+    },{})
+
+    console.log(count)
+  </script>
+</body>
+</html>
