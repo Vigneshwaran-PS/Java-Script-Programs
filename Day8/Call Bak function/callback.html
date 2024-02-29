@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <h2 id="heading"></h2>
+
+  <script>
+
+    function consoleMessage(name){
+      console.log('hi',name)
+    }
+
+    function browserMessage(name){
+      let heading  = document.getElementById("heading")
+      heading.innerHTML = "hi " + name
+    }
+
+
+    function callMessgae(callback){
+        callback("sai")
+    }
+
+    callMessgae(browserMessage)
+    callMessgae(consoleMessage)
+
+
+    //another example
+
+    function add(a,b){
+      return a+b
+    }
+
+    function sub(a,b){
+      return a-b
+    }
+
+    function performOperation(a,b,operation){
+      return operation(a,b)
+    }
+
+    console.log(performOperation(10,20,add))
+    console.log(performOperation(20,10,sub))
+
+
+  </script>
+</body>
+</html>

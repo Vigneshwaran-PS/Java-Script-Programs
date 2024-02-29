@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+    let arr = ["sai","maki","zoro","ravi","mei"]
+
+    arr.forEach(print) // callback function
+
+    function print(val){
+      console.log(val)
+    }
+
+    arr.forEach(val => console.log(val))
+
+    arr.forEach(function(val){
+      console.log("Name : ",val)
+    })
+
+    //changing or modifying arr elements using their object
+
+    let fruit = ["mango","banana","orange","apple"]
+
+    fruit.forEach(printFruit)
+
+    function printFruit(value,index,fruit){
+        fruit[index] = value.toUpperCase()
+    }
+
+    console.log(fruit)
+
+    fruit.forEach((val,index,fruit)=>{
+      fruit[index] = val.toLocaleLowerCase()
+    })
+
+    console.log(fruit)
+
+    //another example
+
+    let arr1 = [1,2,3]
+    let arr2 = arr1
+    arr2[0] = 100
+    arr2[1] = 200
+    arr2[2] = 300
+
+    console.log(arr2)
+    console.log(arr1)
+  </script>
+</body>
+</html>

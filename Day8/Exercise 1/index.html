@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h2>Creating Dropdown List using ForEach Loop</h2>
+  <select name="" id="branch">
+    <option value="select">select<select name="" id=""></select></option>
+  </select>
+
+  <script>
+
+    let arr = ["cse","ece","eee","it","mech"]
+
+    arr.forEach(val=>{
+      let opt = document.createElement('option')
+      opt.textContent = val
+      opt.value = val
+      document.getElementById("branch").append(opt)
+    })
+  </script>
+</body>
+</html>
