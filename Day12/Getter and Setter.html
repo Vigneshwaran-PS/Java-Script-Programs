@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+
+  <script>
+
+    class Employee{
+      constructor(name ,salary){
+        this._name = name;
+        this._salary = salary
+      }
+
+      get salary(){
+        return this._salary + "salary";
+      }
+
+      set salary(salary){
+        this._salary = salary
+      }
+    }
+
+    let employee1 = new Employee("maki",32000)
+    console.log(employee1.salary)
+    employee1.salary = 100000
+    console.log(employee1.salary)
+  </script>
+</body>
+</html>

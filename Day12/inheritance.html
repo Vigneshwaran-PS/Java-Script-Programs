@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    class User{
+      constructor(name , age){
+        this.name = name
+        this.age = age
+      }
+      
+      display(){
+        console.log("Iam User")
+      }
+    }
+
+
+    class Student extends User{
+      constructor(name,age,marks){
+        super(name,age)
+        this.marks = marks;
+      }
+
+      
+      display(){
+        super.display()
+        console.log("Iam Student")
+        console.log("Name : ",this.name)
+        console.log("Age : ",this.age)
+        console.log("Marks : ",this.marks)
+      }
+
+      login(){
+        console.log("student login in")
+      }
+    }
+
+
+    let student  = new Student("maki",23,92)
+    student.display()
+    student.login()
+  </script>
+</body>
+</html>

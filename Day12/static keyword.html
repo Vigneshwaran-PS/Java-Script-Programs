@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    class Student{
+      static department = "cse"
+
+      constructor(name,rollno){
+        this.name = name
+        this.rollno = rollno
+      }
+
+      display(){
+        
+        console.log("Name : ",this.name)
+        console.log("Roll No :",this.rollno)
+      }
+
+      static print(){
+        console.log(Student.department)
+      }
+    }
+
+    let student = new Student("maki",23)
+    student.display()
+    Student.print()
+
+    let student1 = new Student("sai",30)
+    student1.display()
+    Student.print()
+  </script>
+</body>
+</html>
