@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+
+  <script>
+    console.log("First")
+    console.log("second")
+    console.log("third")
+
+
+    setTimeout(() => console.log(" 1 ") ,6000)
+    setTimeout(() => console.log(" 2 ") ,4000)
+    setTimeout(() => console.log(" 3 ") ,2000)
+    setTimeout(() => console.log(" 4 ") ,1000)
+
+    let bodyObj = document.querySelector("body")
+
+    // setTimeout(()=>{
+    //   bodyObj.style.backgroundColor = "pink"
+    // },4000)
+
+    
+    // setTimeout(()=>{
+    //   bodyObj.style.backgroundColor = "yellow"
+    // },2000)
+
+    
+    // setTimeout(()=>{
+    //   bodyObj.style.backgroundColor = "lightblue"
+    // },1000)
+
+    let colors = [0,1,2,3,4,5,6,7,8,9,'D','E','B','C','A','F']
+    setInterval(()=>{
+      let num1 = colors[Math.floor(Math.random()*16)]
+      let num2 = colors[Math.floor(Math.random()*16)]
+      let num3 = colors[Math.floor(Math.random()*16)]
+      let num4 = colors[Math.floor(Math.random()*16)]
+      let num5 = colors[Math.floor(Math.random()*16)]
+      let num6 = colors[Math.floor(Math.random()*16)]
+      bodyObj.style.backgroundColor = "#".concat(num1,num2,num3,num4,num5,num6)
+    },1000)
+  </script>
+</body>
+</html>

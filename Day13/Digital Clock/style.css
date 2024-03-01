@@ -1,0 +1,25 @@
+html , body{
+  margin: 0;
+  background-color: pink;
+}
+
+
+#container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  font-size: 5rem;
+}
+
+
+#wrapper{
+  background: linear-gradient(rgb(241, 126, 145),pink);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+#ampm{
+  font-size: 3rem;
+}
