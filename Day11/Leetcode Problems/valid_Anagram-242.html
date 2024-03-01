@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+<!-- Example 1:
+Input: s = "anagram", t = "nagaram"
+Output: true
+
+Example 2:
+Input: s = "rat", t = "car"
+Output: false -->
+
+<script>
+    function check(original , modified){
+
+      if(original.length != modified.length){
+        return false;
+      }
+      let map = new Map()
+
+      for(let i=0;i<original.length;i++){
+        let count = 0
+        if(map.has(original[i])){
+          count = map.get(original[i])
+          map.set(original[i],count+1)
+          
+        }else{
+          map.set(original[i],1)
+        }
+      }
+      console.log(map)
+
+      for(let i=0;i<modified.length;i++){
+        let count = 0
+        if(map.has(modified[i])){
+          count = map.get(modified[i])
+          if(count == 0){
+            return false
+          }
+          map.set(modified[i],count-1)
+        }else{
+          return false;
+        }
+      }
+      return true
+    }
+
+
+    console.log(check("anagram","nagaram"))
+    console.log(check("omm","mom"))
+    console.log(check("ccbaa","abcc"))
+</script>
+</body>
+</html>

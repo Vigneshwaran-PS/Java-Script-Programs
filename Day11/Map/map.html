@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    let map = new Map();
+    map.set('a',1)
+    map.set('b',2)
+    map.set('c',3)
+    console.log(map)
+    console.log(map.keys())
+    console.log(map.values())
+    console.log(map.has('a'))
+    console.log(map.has('b'))
+    console.log(map.has('z'))  
+    console.log(map.has(1))
+    map.delete('a')
+    console.log(map)  
+
+    for(let num of map){
+      console.log(num)
+    }
+
+    for(let num of map.keys()){
+      console.log(num)
+    }
+
+    for(let num of map.values()){
+      console.log(num)
+    }
+
+    for(let [k,v] of map){
+      console.log(k)
+    }
+
+    map.forEach((k,v) => {
+      console.log("key : ",k , "value : ",v)
+    })
+
+    console.log(...map)
+    </script>
+</body>
+</html>
