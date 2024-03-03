@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+
+  <script>
+
+    // let payment = new Promise((resolve,reject) => {
+    //   let transaction = false
+    //   if(transaction){
+    //     resolve(20000)
+    //   }else{
+    //     reject(20000)
+    //   }
+    // })
+
+    // payment.then(success).catch(failure)
+
+    // function success(amount){
+    //   console.log("Transaction Rs."+amount,"is Done")
+    // }
+
+    // function failure(amount){
+    //     console.log("Transaction Rs."+amount,"is Failed")
+    // }
+
+    function payment(){
+      return new Promise((resolve,reject)=>{
+        let transaction = true
+        if(transaction){
+          resolve(20000)
+        }else{
+          reject(20000)
+        }
+      })
+    }
+
+    payment().then((amount)=>{console.log("Transaction Rs."+amount,"is Done")})
+    .catch((amount)=>{console.log("Transaction Rs."+amount,"is Failed")})
+  
+  
+    function tossCoin(){
+      return new Promise((resolve,reject)=>{
+        let possible = Math.floor(Math.random()*2)
+        if(possible==0){
+          resolve()
+        }else{
+          reject()
+        }
+      })
+    }
+
+    tossCoin().then(()=>console.log("It's Head..you won"))
+    .catch(()=>console.log("It's Tail...sorry....you lost!!!!!!!!!"))
+  
+    
+    let reachA = new Promise((resolve,reject)=>{
+      let reached = true
+      if(reached){
+        setTimeout(resolve,4000,"viki")
+      }else{
+        reject("viki not reached")
+      }
+    })
+
+    let reachB = new Promise((resolve,reject)=>{
+      let reached = true
+      if(reached){
+        setTimeout(resolve,2000,"Sai")
+      }else{
+        reject("sai not reached")
+      }
+    })
+
+    let reachC = new Promise((resolve,reject)=>{
+      let reached = true
+      if(reached){
+        setTimeout(resolve,1000,"maki")
+      }else{
+        reject("maki not reached")
+      }
+    })
+
+
+    Promise.any([reachA,reachB,reachC])
+    .then((message)=>console.log(message))
+    .catch((message)=>console.log(message))
+
+    Promise.all([reachA,reachB,reachC])
+    .then((message)=>console.log(message))
+    .catch((message)=>console.log(message))
+
+    Promise.allSettled([reachA,reachB,reachC])
+    .then((message)=>console.log(message))
+    .catch((message)=>console.log(message))
+  </script>
+</body>
+</html>
